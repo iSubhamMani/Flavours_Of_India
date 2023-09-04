@@ -42,12 +42,36 @@ function createNav(){
 function creatMain(){
     const main = document.createElement('main');
     main.classList.add('main');
+
+    const content = document.createElement('div');
+    content.classList.add('main-content');
+
+    main.appendChild(content);
     
     return main;
+}
+
+function createFooter(){
+    const footer = document.createElement('footer');
+    footer.classList.add('footer');
+
+    const copyIcon = document.createElement('i');
+    copyIcon.classList.add('fa-regular');
+    copyIcon.classList.add('fa-copyright');
+
+    const footerTxt = document.createElement('p');
+    footerTxt.textContent = 'Copyright iSubhamMani';
+    footerTxt.classList.add('copyright-txt');
+
+    footer.appendChild(copyIcon);
+    footer.appendChild(footerTxt);
+
+    return footer;
 }
 
 export default function initialize(){
     const content = document.getElementById('content');
     content.appendChild(createHeader());
     content.appendChild(creatMain());
+    content.appendChild(createFooter());
 }
