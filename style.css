@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Flamenco&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root{
-    --clr-primary: #626D5D;
+    --clr-primary: #1c1c1c;
     --clr-secondary: #FFA103;
     --clr-secondary-light: #f3c678;
 }
@@ -45,22 +45,19 @@ a {
 
 .header > .nav .nav-btn{
     border: 4px solid transparent;
+    font-family: 'Flamenco', cursive;
     outline: none;
     background-color: transparent;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 8px;
     color: var(--clr-secondary);
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
 }
 
 .header > .nav .nav-btn:hover{
     border-bottom: 4px solid var(--clr-secondary-light);
     transition: 0.15s ease-in;
-}
-
-.header > .nav .nav-btn:focus{
-    border-bottom: 4px solid var(--clr-secondary);
 }
 
 .main{
@@ -70,6 +67,28 @@ a {
     background-size:cover;
     background-position:center;
     opacity: 0.8;
+}
+
+.main > .main-content{
+    width: max(50%, 280px);
+    margin: 0 auto;
+}
+
+.footer{
+    background-color: var(--clr-primary);
+    display: flex;
+    justify-content: center;
+    padding: 10px 16px;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--clr-secondary);
+}
+
+.footer p{
+    font-family: 'Flamenco', cursive;
+    font-weight: 600;
 }
 
 @media(max-width: 450px){
