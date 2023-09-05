@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Flamenco&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Flamenco&family=Poppins:wght@300;400;600;800&display=swap');
 
 :root{
     --clr-primary: #1c1c1c;
@@ -12,7 +12,7 @@ a {
 }
 
 *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -60,18 +60,78 @@ a {
     transition: 0.15s ease-in;
 }
 
+.header > .nav .nav-btn.active{
+    border-bottom: 4px solid var(--clr-secondary);
+}
+
 .main{
     flex: 1;
     background-image: url(./assets/bg.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
-    opacity: 0.8;
+    display: flex;
 }
 
 .main > .main-content{
-    width: max(50%, 280px);
-    margin: 0 auto;
+    background-color: #1c1c1c9c;
+    flex: 1;
+    display: flex;
+}
+
+.main > .main-content > .home{
+    padding: 20px 0px 16px 0px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main > .main-content > .home .home-container{
+    padding: 32px 10px;
+    margin-top: 5%;
+    background-color: #1c1c1cc6;
+}
+
+.main > .main-content > .home .heading{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--clr-secondary);
+    margin-bottom: 10px;
+}
+
+.main > .main-content > .home .sub-heading{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--clr-secondary);
+}
+
+
+.main > .main-content > .home .book-seat-btn{
+    font-family: 'Flamenco', cursive;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--clr-secondary);
+    font-size: 1.3rem;
+    padding: 10px 16px;
+    color: var(--clr-primary);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.main > .main-content > .home .book-seat-btn::after{
+    content: '\f054';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding-left: 8px;
+    color: var(--clr-primary);
+}
+
+.main > .main-content > .home .book-seat-btn:hover{
+    background-color: var(--clr-secondary-light);
+    transition: 0.2s ease-in-out;
 }
 
 .footer{
