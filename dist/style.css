@@ -4,6 +4,8 @@
     --clr-primary: #1c1c1c;
     --clr-secondary: #FFA103;
     --clr-secondary-light: #f3c678;
+    --clr-bg-opacity: #1c1c1c9c;
+    --clr-content-bg: #1c1c1cc6;
 }
 
 button,
@@ -74,7 +76,7 @@ a {
 }
 
 .main > .main-content{
-    background-color: #1c1c1c9c;
+    background-color: var(--clr-bg-opacity);
     flex: 1;
     display: flex;
 }
@@ -90,7 +92,7 @@ a {
 .main > .main-content > .home .home-container{
     padding: 32px 10px;
     margin-top: 5%;
-    background-color: #1c1c1cc6;
+    background-color: var(--clr-content-bg);
 }
 
 .main > .main-content > .home .heading{
@@ -132,6 +134,62 @@ a {
 .main > .main-content > .home .book-seat-btn:hover{
     background-color: var(--clr-secondary-light);
     transition: 0.2s ease-in-out;
+}
+
+.main > .main-content > .contact{
+    padding: 20px 0px 16px 0px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main > .main-content > .contact > .contact-container{
+    width: max(40%, 200px);
+    margin: 0 auto;
+    background-color: var(--clr-content-bg);
+    padding: 16px;
+    margin-top: 5%;
+}
+
+.main > .main-content > .contact .contact-heading{
+    color: var(--clr-secondary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--clr-secondary);
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-family: 'Flamenco', cursive;
+}
+
+.main > .main-content > .contact .numbers-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.main > .main-content > .contact .numbers-container span{
+    color: var(--clr-secondary);
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
+
+.main > .main-content > .contact .numbers-container span::before{
+    content: '\f095';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+.main > .main-content > .contact .social-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.main > .main-content > .contact .social-container i{
+    font-size: 1.2rem;
+    color: var(--clr-secondary);
 }
 
 .footer{
