@@ -1,3 +1,7 @@
+import loadHome from "./home";
+import loadContact from "./contact";
+import loadMenu from "./menu";
+
 function createHeader(){
     const header = document.createElement('div');
     header.classList.add('header');
@@ -18,19 +22,47 @@ function createNav(){
     nav.classList.add('nav');
     
     const homeBtn = document.createElement('button');
+
     homeBtn.classList.add('nav-btn');
     homeBtn.classList.add('home-btn');
     homeBtn.textContent = 'Home';
+
+    homeBtn.addEventListener('click', () => {
+        if(homeBtn.classList.contains('active')) return;
+        else{
+            setActiveBtn(document.querySelectorAll('.nav-btn'), document.querySelector('.home-btn'));
+            // load home
+            loadHome();
+        }
+    });
 
     const menuBtn = document.createElement('button');
     menuBtn.classList.add('nav-btn');
     menuBtn.classList.add('menu-btn');
     menuBtn.textContent = 'Menu';
 
+    menuBtn.addEventListener('click', () => {
+        if(menuBtn.classList.contains('active')) return;
+        else{
+            setActiveBtn(document.querySelectorAll('.nav-btn'), document.querySelector('.menu-btn'));
+            // load menu
+            loadMenu();
+        }
+    });
+
     const contactBtn = document.createElement('button');
     contactBtn.classList.add('nav-btn');
     contactBtn.classList.add('contact-btn');
     contactBtn.textContent = 'Contact';
+
+    contactBtn.addEventListener('click', () => {
+        if(contactBtn.classList.contains('active')) return;
+        else{
+            setActiveBtn(document.querySelectorAll('.nav-btn'), document.querySelector('.contact-btn'));
+            // load contact
+            loadContact();
+        }
+    });
     
     nav.appendChild(homeBtn);
     nav.appendChild(menuBtn);
@@ -69,9 +101,20 @@ function createFooter(){
     return footer;
 }
 
+function setActiveBtn(buttons, target){
+    buttons.forEach(btn => {
+        if(btn === target) btn.classList.toggle('active');
+        else {
+            if( btn.classList.contains('active')) btn.classList.toggle('active');
+        }
+    })
+}
+
 export default function initialize(){
     const content = document.getElementById('content');
     content.appendChild(createHeader());
     content.appendChild(creatMain());
     content.appendChild(createFooter());
+    setActiveBtn(document.querySelectorAll('.nav-btn'), document.querySelector('.home-btn'));
+    loadHome();
 }
