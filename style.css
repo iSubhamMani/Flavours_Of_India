@@ -238,37 +238,37 @@ a {
 }
 
 .main > .main-content > .menu > .menu-container .rice{
-    content: url(../src/img/rice.jpg);
+    content: url(./assets/rice.jpg);
 }
 
 .main > .main-content > .menu > .menu-container .biriyani{
-    content: url(../src/img/biriyani.png);
+    content: url(./assets/biriyani.png);
 }
 
 .main > .main-content > .menu > .menu-container .naan{
-    content: url(../src/img/naan.png);
+    content: url(./assets/naan.png);
 }
 
 .main > .main-content > .menu > .menu-container .butter-paneer{
-    content: url(../src/img/butter-paneer.png);
+    content: url(./assets/butter-paneer.png);
 }
 
 .main > .main-content > .menu > .menu-container .samosa{
-    content: url(../src/img/samosa.png);
+    content: url(./assets/samosa.png);
 }
 
 .main > .main-content > .menu > .menu-container .dosa{
-    content: url(../src/img/dosa.jpg);
+    content: url(./assets/dosa.jpg);
 }
 
 .main > .main-content > .menu > .menu-container .idly{
-    content: url(../src/img/idly.jpg);
+    content: url(./assets/idly.jpg);
 }
 .main > .main-content > .menu > .menu-container .tandoor-chicken{
-    content: url(../src/img/tandoor-chicken.png);
+    content: url(./assets/tandoor-chicken.png);
 }
 .main > .main-content > .menu > .menu-container .gulab-jamun{
-    content: url(../src/img/gulab-jamun.png);
+    content: url(./assets/gulab-jamun.png);
 }
 
 .footer{
